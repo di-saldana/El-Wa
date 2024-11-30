@@ -25,7 +25,8 @@ struct el_waApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+//            ContentView()
+            StartView()
         }
         .modelContainer(sharedModelContainer)
     }

@@ -14,12 +14,12 @@ struct StartView: View {
     var body: some View {
         NavigationView {
             VStack(spacing: 20) {
-                Text("Welcome to the Game!")
+                Text("Wepa!")
                     .font(.largeTitle)
                     .fontWeight(.bold)
 
                 Button(action: startGame) {
-                    Text("Start Game")
+                    Text("START")
                         .font(.headline)
                         .foregroundColor(.white)
                         .padding()

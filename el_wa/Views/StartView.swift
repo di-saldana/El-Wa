@@ -9,7 +9,8 @@ import Foundation
 import SwiftUI
 
 struct StartView: View {
-    @State private var navigateToGame = false // Tracks navigation state
+    @State private var navigateToFamGame = false // Tracks navigation to FamGameView
+    @State private var navigateToBoricuaGame = false // Tracks navigation to BoricuaGameView
 
     var body: some View {
         NavigationView {
@@ -18,8 +19,9 @@ struct StartView: View {
                     .font(.largeTitle)
                     .fontWeight(.bold)
 
-                Button(action: startGame) {
-                    Text("START")
+                // Button for FamGameView
+                Button(action: startFamGame) {
+                    Text("Fam")
                         .font(.headline)
                         .foregroundColor(.white)
                         .padding()
@@ -28,19 +30,49 @@ struct StartView: View {
                         .cornerRadius(10)
                 }
 
+                // Button for BoricuaGameView
+                Button(action: startBoricuaGame) {
+                    Text("Bori")
+                        .font(.headline)
+                        .foregroundColor(.white)
+                        .padding()
+                        .frame(maxWidth: 200)
+                        .background(Color.green)
+                        .cornerRadius(10)
+                }
+
+                // Navigation links (hidden)
                 NavigationLink(
-                    destination: GameView(), // Destination is the GameView
-                    isActive: $navigateToGame, // Bound to navigation state
-                    label: { EmptyView() } // Invisible link
+                    destination: FamGameView(), // Destination for FamGameView
+                    isActive: $navigateToFamGame,
+                    label: { EmptyView() }
+                )
+
+                NavigationLink(
+                    destination: BoriGameView(), // Destination for BoricuaGameView
+                    isActive: $navigateToBoricuaGame,
+                    label: { EmptyView() }
                 )
             }
             .padding()
         }
     }
 
-    func startGame() {
+    func startFamGame() {
+        startGame(orientation: .landscape) {
+            navigateToFamGame = true
+        }
+    }
+
+    func startBoricuaGame() {
+        startGame(orientation: .landscape) {
+            navigateToBoricuaGame = true
+        }
+    }
+
+    func startGame(orientation: UIInterfaceOrientationMask, completion: @escaping () -> Void) {
         // Change orientation to landscape
-        AppDelegate.orientationLock = .landscape
+        AppDelegate.orientationLock = orientation
 
         if #available(iOS 16.0, *) {
             UIApplication.shared.connectedScenes.forEach { scene in
@@ -53,8 +85,7 @@ struct StartView: View {
             UIViewController.attemptRotationToDeviceOrientation()
         }
 
-        // Navigate to GameView
-        navigateToGame = true
+        // Navigate to the selected game
+        completion()
     }
 }
-

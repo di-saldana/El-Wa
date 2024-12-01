@@ -1,26 +1,24 @@
 //
-//  FamGameView.swift
+//  BoriGameView.swift
 //  el_wa
 //
-//  Created by Dianelys Saldaña on 11/30/24.
+//  Created by Dianelys Saldaña on 12/1/24.
 //
 
 import Foundation
 import SwiftUI
-import SwiftData
 
-struct FamGameView: View {
+struct BoriGameView: View {
     
-    let samplePictures = [
-        FamMember(imageName: "made", category: "Fam"),
-        FamMember(imageName: "dana", category: "Fam"),
-        FamMember(imageName: "diana", category: "Fam"),
-        FamMember(imageName: "dayna", category: "Fam"),
-        FamMember(imageName: "tati", category: "Fam"),
+    let frasesBoricuas = [
+        "Pasteles", "Mofongo", "Acai", "Malta", "Church's", "Don Frappe", "Limber",
+        "Coquito", "Arroz chino", "El Mesón", "Alcapurria", "Ricomini", "Mojito",
+        "Helado de parcha y coco", "Bacalaitos", "Bad Bunny", "Jovani Vazquez",
+        "Ricky Roselló", "Mayagüez", "Ponce", "San Juan", "El Poblado"
     ]
-
+    
     @StateObject private var motionManager = MotionManager()
-    @State private var currentPicture: FamMember?
+    @State private var currentPhrase: String?
     @State private var score = 0
     @State private var timeRemaining = 60
     @State private var backgroundColor = Color.yellow
@@ -39,12 +37,13 @@ struct FamGameView: View {
             VStack {
                 Spacer()
 
-                if let imageName = currentPicture?.imageName {
-                    Image(imageName)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(maxHeight: 300)
+                if let phrase = currentPhrase {
+                    Text(phrase)
+//                        .font(.largeTitle)
+                        .font(.system(size: 66))
+                        .fontWeight(.bold)
                         .padding()
+                        .multilineTextAlignment(.center)
                 } else {
                     Text("Get Ready!")
                         .font(.largeTitle)
@@ -79,7 +78,7 @@ struct FamGameView: View {
             }
         }
         .onAppear {
-            currentPicture = samplePictures.randomElement()
+            currentPhrase = frasesBoricuas.randomElement()
             startTimer()
             motionManager.startMotionUpdates()
         }
@@ -95,15 +94,14 @@ struct FamGameView: View {
         }
     }
 
-    
     func handleCorrectAnswer() {
         score += 1
-        currentPicture = samplePictures.randomElement()
+        currentPhrase = frasesBoricuas.randomElement()
         cycleBackgroundColor()
     }
 
     func handlePass() {
-        currentPicture = samplePictures.randomElement()
+        currentPhrase = frasesBoricuas.randomElement()
         cycleBackgroundColor()
     }
     

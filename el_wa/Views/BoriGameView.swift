@@ -11,10 +11,17 @@ import SwiftUI
 struct BoriGameView: View {
     
     let frasesBoricuas = [
-        "Pasteles", "Mofongo", "Acai", "Malta", "Church's", "Don Frappe", "Limber",
+        "Pasteles", "Mofongo", "Malta", "Church's", "Don Frappe", "Limber",
         "Coquito", "Arroz chino", "El Mesón", "Alcapurria", "Ricomini", "Mojito",
         "Helado de parcha y coco", "Bacalaitos", "Bad Bunny", "Jovani Vazquez",
-        "Ricky Roselló", "Mayagüez", "Ponce", "San Juan", "El Poblado"
+        "Ricky Roselló", "Mayagüez", "Ponce", "San Juan", "El Poblado", "Wepa", "Janguear",
+        "Boricua", "Nítido", "Acicalao", "Revolú", "Bembé", "Chévere", "Corillo", "Bochinche",
+        "Al garete", "Perreo", "Guagua", "Chavos", "Chiringa", "Brutal", "Acho", "Pichea", "Guillao",
+        "Tostones", "Arroz con gandules", "Pernil", "Tembleque", "Flan", "Sorullitos", "Asopao",
+        "Empanadillas", "Pan sobao", "Arroz mamposteao", "Piña colada", "Coquito", "Coquí", "Flor de Maga",
+        "El Yunque", "El Morro", "Trovador", "Fiestas de San Sebastián", "Fiestas Patronales", "Bomba", "Plena",
+        "Capicú", "Pelea de gallos", "Salsa", "Reguetón", "Cuatro puertorriqueño", "Guayabera", "Aguinaldos",
+        "Chancletas", "Hamaca", "Pitorro", "Ron", "Vieques", "Culebra"
     ]
     
     @StateObject private var motionManager = MotionManager()

@@ -13,7 +13,7 @@
 		EF17182C2CFB193A00DD9E05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF17182B2CFB193A00DD9E05 /* Assets.xcassets */; };
 		EF17182F2CFB193A00DD9E05 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF17182E2CFB193A00DD9E05 /* Preview Assets.xcassets */; };
 		EF1718392CFB1AEA00DD9E05 /* FamMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1718382CFB1AEA00DD9E05 /* FamMember.swift */; };
-		EF17183B2CFB1B7100DD9E05 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF17183A2CFB1B7100DD9E05 /* GameView.swift */; };
+		EF17183B2CFB1B7100DD9E05 /* FamGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF17183A2CFB1B7100DD9E05 /* FamGameView.swift */; };
 		EF17183E2CFB1F0300DD9E05 /* MotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF17183D2CFB1F0300DD9E05 /* MotionManager.swift */; };
 		EF29DFC52CFB587700001DA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF29DFC42CFB587700001DA9 /* AppDelegate.swift */; };
 		EF29DFC72CFB5EED00001DA9 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF29DFC62CFB5EED00001DA9 /* StartView.swift */; };
@@ -28,7 +28,7 @@
 		EF17182B2CFB193A00DD9E05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF17182E2CFB193A00DD9E05 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EF1718382CFB1AEA00DD9E05 /* FamMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamMember.swift; sourceTree = "<group>"; };
-		EF17183A2CFB1B7100DD9E05 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		EF17183A2CFB1B7100DD9E05 /* FamGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamGameView.swift; sourceTree = "<group>"; };
 		EF17183D2CFB1F0300DD9E05 /* MotionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionManager.swift; sourceTree = "<group>"; };
 		EF29DFC42CFB587700001DA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF29DFC62CFB5EED00001DA9 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
@@ -96,7 +96,7 @@
 		EF1718372CFB1A8700DD9E05 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				EF17183A2CFB1B7100DD9E05 /* GameView.swift */,
+				EF17183A2CFB1B7100DD9E05 /* FamGameView.swift */,
 				EF1718272CFB193600DD9E05 /* ContentView.swift */,
 				EF29DFC62CFB5EED00001DA9 /* StartView.swift */,
 				EF29DFC82CFC627D00001DA9 /* BoriGameView.swift */,
@@ -198,7 +198,7 @@
 				EF29DFC92CFC627D00001DA9 /* BoriGameView.swift in Sources */,
 				EF29DFC52CFB587700001DA9 /* AppDelegate.swift in Sources */,
 				EF1718262CFB193600DD9E05 /* el_waApp.swift in Sources */,
-				EF17183B2CFB1B7100DD9E05 /* GameView.swift in Sources */,
+				EF17183B2CFB1B7100DD9E05 /* FamGameView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,6 +329,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"el_wa/Preview Content\"";
@@ -336,10 +337,11 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "El Wá?";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.family-games";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -348,9 +350,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "es.ua.mastermoviles.dsl.el-wa";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -359,6 +362,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"el_wa/Preview Content\"";
@@ -366,10 +370,11 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "El Wá?";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.family-games";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -378,9 +383,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "es.ua.mastermoviles.dsl.el-wa";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

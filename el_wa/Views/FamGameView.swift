@@ -16,7 +16,14 @@ struct FamGameView: View {
         FamMember(imageName: "dana", category: "Fam"),
         FamMember(imageName: "diana", category: "Fam"),
         FamMember(imageName: "dayna", category: "Fam"),
+        FamMember(imageName: "jinny", category: "Fam"),
+        FamMember(imageName: "dixon", category: "Fam"),
         FamMember(imageName: "tati", category: "Fam"),
+        FamMember(imageName: "goldo", category: "Fam"),
+        FamMember(imageName: "oly", category: "Fam"),
+        FamMember(imageName: "julio", category: "Fam"),
+        FamMember(imageName: "tusca", category: "Fam"),
+        FamMember(imageName: "cesar", category: "Fam"),
     ]
 
     @StateObject private var motionManager = MotionManager()

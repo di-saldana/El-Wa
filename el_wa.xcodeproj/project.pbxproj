@@ -18,6 +18,8 @@
 		EF29DFC52CFB587700001DA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF29DFC42CFB587700001DA9 /* AppDelegate.swift */; };
 		EF29DFC72CFB5EED00001DA9 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF29DFC62CFB5EED00001DA9 /* StartView.swift */; };
 		EF29DFC92CFC627D00001DA9 /* BoriGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF29DFC82CFC627D00001DA9 /* BoriGameView.swift */; };
+		EF9802862D0A4E8900B3722F /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9802852D0A4E8800B3722F /* VideoPlayerView.swift */; };
+		EF98028B2D0A552A00B3722F /* intro.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = EF98028A2D0A552A00B3722F /* intro.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		EF29DFC42CFB587700001DA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF29DFC62CFB5EED00001DA9 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		EF29DFC82CFC627D00001DA9 /* BoriGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoriGameView.swift; sourceTree = "<group>"; };
+		EF9802852D0A4E8800B3722F /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
+		EF98028A2D0A552A00B3722F /* intro.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = intro.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +74,7 @@
 				EF1718372CFB1A8700DD9E05 /* Views */,
 				EF1718352CFB1A6C00DD9E05 /* Models */,
 				EF1718252CFB193600DD9E05 /* el_waApp.swift */,
+				EF98028A2D0A552A00B3722F /* intro.mp4 */,
 				EF17182B2CFB193A00DD9E05 /* Assets.xcassets */,
 				EF17182D2CFB193A00DD9E05 /* Preview Content */,
 			);
@@ -100,6 +105,7 @@
 				EF1718272CFB193600DD9E05 /* ContentView.swift */,
 				EF29DFC62CFB5EED00001DA9 /* StartView.swift */,
 				EF29DFC82CFC627D00001DA9 /* BoriGameView.swift */,
+				EF9802852D0A4E8800B3722F /* VideoPlayerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -180,6 +186,7 @@
 			files = (
 				EF17182F2CFB193A00DD9E05 /* Preview Assets.xcassets in Resources */,
 				EF17182C2CFB193A00DD9E05 /* Assets.xcassets in Resources */,
+				EF98028B2D0A552A00B3722F /* intro.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,6 +206,7 @@
 				EF29DFC52CFB587700001DA9 /* AppDelegate.swift in Sources */,
 				EF1718262CFB193600DD9E05 /* el_waApp.swift in Sources */,
 				EF17183B2CFB1B7100DD9E05 /* FamGameView.swift in Sources */,
+				EF9802862D0A4E8900B3722F /* VideoPlayerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

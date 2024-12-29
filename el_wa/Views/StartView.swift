@@ -16,6 +16,8 @@ struct StartView: View {
     @State private var passwordInput = ""
     @State private var passwordError = false
     @State private var showVideo = true // Manage video visibility
+    @State private var backgroundColor = Color(red: 133/255, green: 210/255, blue: 218/255)
+
 
     let famGameKeyPhrase = "wepa" // Key phrase for FamGameView
     let videoName = "intro"
@@ -23,6 +25,9 @@ struct StartView: View {
     var body: some View {
         NavigationView {
             ZStack {
+                backgroundColor
+                    .ignoresSafeArea()
+                
                 if showVideo {
                     VideoPlayerView(videoName: videoName)
                         .ignoresSafeArea()
@@ -35,8 +40,8 @@ struct StartView: View {
 //                        .foregroundColor(.white)
 //                        .shadow(radius: 10)
 
-                    // Button for FamGameView (password-protected)
-                    Button(action: { showPasswordPrompt = true }) {
+                    // Button for FamGameView
+                    Button(action: startFamGame) {
                         Text("Fam Game")
                             .font(.headline)
                             .foregroundColor(.white)
@@ -53,7 +58,7 @@ struct StartView: View {
                             .foregroundColor(.white)
                             .padding()
                             .frame(maxWidth: 200)
-                            .background(Color.green)
+                            .background(Color.red)
                             .cornerRadius(10)
                     }
 
@@ -69,17 +74,17 @@ struct StartView: View {
                         label: { EmptyView() }
                     )
                 }
-                .padding()
-                .alert("Pon el Password", isPresented: $showPasswordPrompt, actions: {
-                    SecureField("Password", text: $passwordInput)
-                    Button("Submit") {
-                        validatePassword()
-                    }
-                    Button("Cancel", role: .cancel) {
-                        passwordInput = "" // Clear input
-                        passwordError = false
-                    }
-                })
+//                .padding()
+//                .alert("Pon el Password", isPresented: $showPasswordPrompt, actions: {
+//                    SecureField("Password", text: $passwordInput)
+//                    Button("Submit") {
+//                        validatePassword()
+//                    }
+//                    Button("Cancel", role: .cancel) {
+//                        passwordInput = "" // Clear input
+//                        passwordError = false
+//                    }
+//                })
             }
         }
     }

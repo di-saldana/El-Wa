@@ -24,6 +24,7 @@ struct FamGameView: View {
         FamMember(imageName: "julio", category: "Fam"),
         FamMember(imageName: "tusca", category: "Fam"),
         FamMember(imageName: "cesar", category: "Fam"),
+        FamMember(imageName: "nelson", category: "Fam"),
     ]
 
     @StateObject private var motionManager = MotionManager()
